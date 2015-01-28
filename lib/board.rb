@@ -7,7 +7,7 @@ class Board
 	def initialize
 		@grid = {}
 		[*1..9].each do |row|
-			[*1..9].each { |column| @grid["#{row}#{column}".to_sym] = Cell.new}
+			[*1..9].each { |column| @grid["#{row}#{column}"] = Cell.new}
 		end
 	end
 end
