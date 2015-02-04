@@ -12,8 +12,8 @@ describe Board do
 		expect(board.grid[11]).to be_a(Cell)
 	end
 
-	xit "should be able to add numbers (1 - 9) in cells" do
-		board.add(1, 11)
-		expect(board.grid[11]).to eq(1)
+	it "should be able to add a number (1 - 9) to a cell" do
+		board.grid[11].add(1)
+		expect(board.grid[11].number).to eq([1])
 	end
 end

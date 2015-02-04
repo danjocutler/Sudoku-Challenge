@@ -1,5 +1,3 @@
-require 'cell'
-
 class Board
 
 	attr_reader :grid
@@ -10,9 +8,4 @@ class Board
 			[*1..9].each { |column| @grid["#{row}#{column}".to_i] = Cell.new}
 		end
 	end
-
-	def add(number, coordinate)
-		
-	end
-
 end
