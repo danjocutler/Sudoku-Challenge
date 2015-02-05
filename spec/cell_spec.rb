@@ -14,4 +14,9 @@ describe Cell do
 		expect(cell.empty?).to be(false)
 	end
 
+	it 'should become empty when "." is added' do
+		cell.add(1)
+		cell.add('.')
+		expect(cell.empty?).to be(true)
+	end
 end

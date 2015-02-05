@@ -4,7 +4,7 @@ class Cell
 
 	def initialize
 		@empty = true
-		@number = []
+		@number = ['.']
 	end
 
 	def empty?
@@ -12,8 +12,8 @@ class Cell
 	end
 
 	def add(num)
-		@empty = false
+		num == '.' ? @empty = true : @empty = false
+		@number.clear
 		@number << num
 	end
-
 end
