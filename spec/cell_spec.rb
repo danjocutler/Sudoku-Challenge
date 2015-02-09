@@ -9,7 +9,7 @@ describe Cell do
 		expect(cell).to be_empty
 	end
 
-	it "shouldn't be empty when a number is added" do
+	it 'should not be empty when a number is added' do
 		cell.add(1)
 		expect(cell.empty?).to be(false)
 	end
