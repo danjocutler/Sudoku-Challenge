@@ -2,9 +2,9 @@ require 'board'
 
 describe Board do
 
-	context 'board creation and known number input' do
+	let(:board) {Board.new}
 
-		let(:board) {Board.new}
+	context 'board creation and known number input' do
 
 		it 'has 81 cells (9x9)' do
 			expect(board.grid.count).to eq(81)
@@ -32,6 +32,9 @@ describe Board do
 
 	context 'rows, columns and boxes'
 
+		it 'has 9 cells per column' do
+			expect(board.grid.to_a[0, 9].to_h.count).to eq(9)
+		end
 	# xcontext 'solution' do
 
 	# 	it 'all rows should have unique digits 1-9' do
@@ -45,7 +48,7 @@ describe Board do
 
 	# 	end
 
-	# 	it 'four 3x3 squares should have unique digits 1-9' do
+	# 	it 'nine 3x3 squares should have unique digits 1-9' do
 
 	# 	end
 	# end
