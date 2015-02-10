@@ -32,8 +32,8 @@ describe Board do
 
 	context 'rows, columns and boxes'
 
-		it 'has 9 cells per column' do
-			expect(board.grid.to_a[0, 9].to_h.count).to eq(9)
+		it 'can call individual columns' do
+			expect(board.column(1).count).to eq(9)
 		end
 	# xcontext 'solution' do
 
