@@ -30,7 +30,7 @@ describe Board do
 		end
 	end
 
-	context 'rows, columns and boxes'
+	context 'rows, columns and boxes' do
 
 		it 'can call individual rows' do
 			expect(board.row(1).count).to eq(9) #This test's not quite right
@@ -40,11 +40,16 @@ describe Board do
 			expect(board.column(1).count).to eq(9) #This test's not quite right
 		end
 
+		it 'can call individual boxes' do
+			expect(board.box(1).count).to eq(9) #This test's not quite right
+		end
+
 		it 'raises an error if any row, column or box less than 1 or more than 9, is called' do
 			expect {board.row(0)}.to raise_error("Not a valid number")
 			expect {board.column(0)}.to raise_error("Not a valid number")
-			# expect {board.box(0)}.to raise_error("Not a valid number")
+			expect {board.box(0)}.to raise_error("Not a valid number")
 		end
+	end
 	# xcontext 'solution' do
 
 	# 	it 'all rows should have unique digits 1-9' do
