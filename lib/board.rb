@@ -4,8 +4,8 @@ class Board
 
 	def initialize
 		@grid = {}
-		[*1..9].each do |row|
-			[*1..9].each { |column| @grid["#{row}#{column}".to_i] = Cell.new}
+		[*1..9].each do |x|
+			[*1..9].each { |y| @grid["#{x}#{y}".to_i] = Cell.new}
 		end
 	end
 

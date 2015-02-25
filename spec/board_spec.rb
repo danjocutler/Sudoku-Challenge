@@ -50,21 +50,4 @@ describe Board do
 			expect {board.box(0)}.to raise_error("Not a valid number")
 		end
 	end
-	# xcontext 'solution' do
-
-	# 	it 'all rows should have unique digits 1-9' do
-	# 		board.grid[11].add(1)
-	# 		board.grid[16].add(8)
-	# 		board.grid[19].add(3)
-	# 		expect(board.solve).to eq
-	# 	end
-
-	# 	it 'all columns should have unique digits 1-9' do
-
-	# 	end
-
-	# 	it 'nine 3x3 squares should have unique digits 1-9' do
-
-	# 	end
-	# end
 end
