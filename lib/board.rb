@@ -4,18 +4,18 @@ class Board
 
 	def initialize
 		@grid = {}
-		[*1..9].each do |x|
-			[*1..9].each { |y| @grid["#{x}#{y}".to_i] = Cell.new}
+		[*1..9].each do |y|
+			[*1..9].each { |x| @grid["#{x}#{y}".to_i] = Cell.new}
 		end
 	end
 
-	def row(number)
+	def column(number)
 		raise "Not a valid number" if number < 1 || number > 9
 		@grid.to_a.values_at(number - 1, number + 8, number + 17, number + 26, number + 35,
 												number + 44, number + 53, number + 62, number + 71).to_h
 	end
 
-	def column(number)
+	def row(number)
 		raise "Not a valid number" if number < 1 || number > 9
 		@grid.to_a[(number - 1) * 9, 9].to_h
 	end
