@@ -1,4 +1,5 @@
 # Sudoku Challenge
+[![Code Climate](https://codeclimate.com/github/danjocutler/Sudoku-Challenge/badges/gpa.svg)](https://codeclimate.com/github/danjocutler/Sudoku-Challenge)
 
 Build a Sudoku checker that can automatically generate and solve any 9 x 9 [Sudoku](http://en.wikipedia.org/wiki/Sudoku) grid such as the one below:
 
